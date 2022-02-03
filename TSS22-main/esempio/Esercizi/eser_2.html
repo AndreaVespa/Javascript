@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <p>Anno di nascita</p>
+<input type="number" name="anno" id="anno" placeholder="inserire anno di nascita" ><br>
+<p>Anno corrente</p>
+<input type="number" name="anno1" id="anno1" placeholder="inserire anno corrente" ><br>
+<script>
+    function  calcoloEta (){
+        var anno= document.getElementById("anno").value;
+        var anno1=document.getElementById("anno1").value;
+        
+        
+        var eta= anno1- anno ;
+        console.log(eta);
+    }
+    
+    
+    
+    </script>
+    <input type="button" value="Calcola età" onclick="calcoloEta()">
+
+
+
+    </form>
+</body>
+</html>
