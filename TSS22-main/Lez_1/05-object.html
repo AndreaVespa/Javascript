@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <button onclick="stampaInfo(studente)" > Info Studente </button>
+    <button onclick="stampaInfo(docente)" > Info Docente </button>
+    <button onclick="stampaInfo(rettore)" > Info Rettore </button>
+     -->
+
+     <label>Marca:  </label> <input type="text" id="marca"><br>
+     <label>Modello:  </label> <input type="text" id="modello"><br>
+     <label>Giri Motore: </label> <input type="number" id="giriMotore"><br>
+     <label>Marcia: </label> <input type="number" id="numMarcia"><br>
+     
+     <input type="button" onclick="valutaMotore()" value="Calcola!">
+     <input type="button" onclick="inserisciDati()" value="vai">
+
+
+    <div id="demo"></div>
+
+    <script>
+    var demo = document.getElementById('demo');
+
+        function prendiMarca(marca){
+            this.marca = marca;
+            this.toString=function(){
+                return `La marca è: ${this.marca}`;
+            }
+        }
+ function prendiModello(modello){
+     this.modello= modello;
+     this.toString =function(){
+        return ` E' una:  ${this.modello}`;
+     }
+ }
+
+ function prendiGiri(giriMotore){
+     this.giriMotore = giriMotore;
+     this.toString =function(){
+        return ` Stai girando a:  ${this.giriMotore} giri`;
+     }
+ }
+
+ function prendiMarcia(numMarcia){
+     this.numMarcia = numMarcia;
+     this.toString =function(){
+        return ` Sei alla marcia n: ${this.numMarcia} `;
+     }
+ }
+ 
+ function calcoloVel(){
+   this.velocita =( this.insGiri / (this.insMarcia*100));
+     }
+ 
+ 
+ function inserisciDati(){
+     var marca = document.getElementById('marca').value;
+     var modello= document.getElementById('modello').value;
+     var giriMotore= document.getElementById('giriMotore').value;
+     var numMarcia= document.getElementById('numMarcia').value;
+     
+     
+     var insMarca = new prendiMarca(marca);
+     var insModello= new prendiModello(modello);
+     var insGiri= new prendiGiri(giriMotore);
+     var insMarcia= new prendiMarcia(numMarcia);
+     var insVelocita= new calcoloVel(velocita);
+     
+
+    demo.innerHTML= insMarca.toString()+ '<br>';
+    demo.innerHTML+= insModello.toString()+'<br>' ;
+    demo.innerHTML+= insGiri.toString()+ '<br>';
+    demo.innerHTML+=insMarcia.toString()+ '<br>';
+    demo.innerHTML+=velocita.toString()+ '<br>';
+   
+    console.log(insMarca.toString());
+    console.log(insModello.toString());
+    console.log(insGiri.toString());
+    console.log(insMarcia.toString());
+
+}
+
+
+
+
+    </script>
+
+    <script src="js/05-scriptObj2.js"></script>
+</body>
+</html>
