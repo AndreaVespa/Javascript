@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DII di diverse categorie</h1>
+    <form >
+       
+        <p>Inserisci nome del dio</p>
+<input type="text" name="num1" id="num1">
+
+<p>Tipologia di dio</p>
+<input type="text" name="num2" id="num2">
+
+<input type="button" value="Generazione Dio" onclick="calcM()">
+
+</form>
+<div id="molt"></div>
+<div id="divis"></div>
+<script>
+    var molt = document.getElementById("molt")
+    var div = document.getElementById("divis")
+function calcM(){
+
+var num1 =document.getElementById("num1").value;
+var num2 =document.getElementById("num2").value;
+
+var totale1 = num1 + num2;
+console.log(totale1);
+molt.innerHTML=  totale1;
+}
+function calcD(){
+
+var num1 =document.getElementById("num1").value;
+var num2 =document.getElementById("num2").value;
+
+var totale1 = (num1 / num2);
+console.log(totale1);
+div.innerHTML="Il totale " + totale1;
+}
+
+
+
+</script>
+   
+</body>
+</html>
