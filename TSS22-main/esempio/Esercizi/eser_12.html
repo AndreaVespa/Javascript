@@ -7,31 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
+    
+<script>
 
-        var parola='Andrea';
-        var pos =parola.indexOf('Ja');
-        console.log(pos);
-
-        if(pos == 0){
-            console.log(parola);
-        }else{
-            console.log('Ja'+ parola);
-        }
-
-
+function inverti(str){
+    var stringa='';
+    for(var i = str.length -1 ; i>= 0 ; i--){
+        stringa += str[i];
+    }
+    return stringa;
+}
+console.log(inverti('ciao'));
 
 
 
-
-
-
-
-
-    </script>
-
-
-
+</script>
 
 
 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ESERCIZIO 9</h1>
+    <form >
+        <input type="text" name="text" id="testo">
+    <input type="button" value="maiusc" onclick="maiusc()">
+    </form>
+    <div id="maiuscolo"></div>
+    <script>
+        
+        function maiusc(){
+    var parola =document.getElementById('testo').value;
+ var risultato =parola.split(" ");
+
+ for (var i = 0; i < risultato.length; i++) {
+    risultato[i] = risultato[i].charAt(0).toUpperCase() + risultato[i].slice(1)
+
+}
+var parola2= risultato.join(" ");
+console.log(parola2);
+
+
+        }
+        
+    </script>
+</body>
+</html>

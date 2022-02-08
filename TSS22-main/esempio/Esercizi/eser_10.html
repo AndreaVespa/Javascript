@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Esercizio 10</h1>
+    <script>
+var  generaStringa = (num) => {
+    var caratteri ='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    var risultato1= ' ';
+    var caratteriLu = caratteri.length;
+    for ( let i = 0; i < num; i++ ) {
+        risultato1 += caratteri.charAt(Math.floor(Math.random() * caratteriLu));
+    }
+
+    return risultato1;
+}
+
+var StringaRandom = () =>{
+   var contenitoreStringa = document.getElementById('stringa_casuale'); 
+    contenitoreStringa.innerHTML =  generaStringa(10);    
+}
+
+console.log(generaStringa(10));
+
+
+
+
+    </script>
+    
+</body>
+</html>
