@@ -1,0 +1,30 @@
+.blue{
+    color: blue;
+}
+
+.red{
+    color: red;
+}
+
+.fontUp{
+    font-size: 24px;
+}
+
+
+li{
+    list-style-type: none;
+    position:relative;
+    margin: 2px;
+    padding: 1em;
+    background-color: lightcoral;
+}
+
+
+li.done{
+color: rgb(107, 197, 107);
+text-decoration: line-through;
+
+}
+/* li.done::before{
+
+} */

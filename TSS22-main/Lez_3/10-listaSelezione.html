@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+<ul>
+<li>comprare latte</li>
+<li>cstudiare java</li>
+<li>giocare</li>
+<li>leggere</li>
+<li>andrae dal dentista</li>
+
+</ul>
+
+    <script >
+        // var lis = document.querySelectorAll('li'); // nodelist -> array
+        // for(var i=0; i < lis.length; i++)(function(i){
+        //     lis[i].onclick = function () {
+        //         if(lis[i].className == ''){
+        //             lis[i].setAttribute('class', 'done');
+
+        //         }else{
+        //             lis[i].removeAttribute('class');
+        //         }
+        //     }
+        // })(i);
+        
+            // lis.forEach(element => {
+            //     element.onclick = function(){
+            //         if(element.className == ''){
+            //      element.setAttribute('class', 'done');
+
+            //   }else{
+            //          element.removeAttribute('class');
+            //     }
+            // }
+            // })
+
+                var list= document.querySelector('ul');
+                list.addEventListener('click', function(ev){
+                    if(ev.target.tagName== 'LI'){
+                        ev.target.classList.toggle('done');
+                    }
+                }, false)
+                
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Compila i campi</h1>
+    <p>Controlla lo username mentree l'utente scrive</p>
+
+    
+    <form action="http://www.example.org" method="POST">
+        <label  for="user">Username</label>
+        <input  minlength="" type="text" name="username" id="username">
+        <br>
+        
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        
+        
+        <div id="feedback"></div>
+        <br>
+        <input type="submit" value="registrati">
+    </form>
+<script>
+    var username = document.querySelector('#username');
+    var feedback = document.querySelector('#feedback');
+
+    function suggerisci(){
+        feedback.innerHTML = 'ti conviene utilizzare uno username di almeno 5 char'
+        feedback.className='warning';
+    }
+
+function controlla(){
+    var user = username.value;
+    if(user.length<=5){
+        feedback.innerHTML ='non puoi usare uno username cosi corto'
+        feedback.className='danger';
+       
+    }else{
+        
+            
+        feedback.innerHTML='Caratteri gusti';
+        feedback.className='feed';
+
+        }
+    }
+
+
+   
+    username.addEventListener('input', controlla, false);
+
+
+</script>
+</body>
+</html>
